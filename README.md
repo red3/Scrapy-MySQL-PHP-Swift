@@ -5,6 +5,7 @@ Scrapy+MySQL+PHP+Swift开发攻略
 	cd api/include
 	vi config.db.php
 这个文件应该是这个样子的：
+
 	<?php
 	/**
 	* Database configuration
