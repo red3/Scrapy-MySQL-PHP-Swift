@@ -31,3 +31,13 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+# Sublime
+#
+*.sublime-project
+*.sublime-workspace
+
+# Database Config File
+# We don't want to add this file to git 
+config.db.php
+#
