@@ -36,7 +36,7 @@ if ($_GET['ishot']) {
     // new girl
     $sql = "SELECT * FROM meizi WHERE 1 = 1 ORDER BY id DESC LIMIT {$start}, {$size}";
 }
-echo $sql;
+
 $result = $conn->query($sql)->fetch_all(MYSQLI_ASSOC);
 if (!empty($result)) {
 

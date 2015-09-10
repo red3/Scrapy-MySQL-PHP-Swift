@@ -1,6 +1,6 @@
 from scrapy import Spider
 from scrapy.selector import Selector
-from dbmeizi.items import MeiziItem
+from dbmeizi.items import DbmeiziItem
 import time
 
 class dbmeiziSpider(Spider):
@@ -15,9 +15,10 @@ class dbmeiziSpider(Spider):
     def parse(self, response):
         divResults = Selector(response).xpath('//div[@class="img_single"]')
         for div in divResults:
-            item = MeiziItem()
             href = div.xpath('.//a')[0]
             img = div.xpath('.//img')[0]
+
+            item = DbmeiziItem()
             item['topic_link'] = href.xpath('@href').extract()[0]
             item['title'] = img.xpath('@title').extract()[0] 
             item['imgsrc'] = img.xpath('@src').extract()[0]

@@ -25,7 +25,7 @@ if ($girlid == '' || !is_numeric($girlid)) {
 }
 
 // let the girl's startcount + 1
-$result = $conn->query("UPDATE dbmeizi set startcount = startcount + 1 WHERE id = {$girlid}");
+$result = $conn->query("UPDATE meizi set star_count = star_count + 1 WHERE id = {$girlid}");
 
 if ($result) {
     // check for empty result

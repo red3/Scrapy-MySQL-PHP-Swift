@@ -5,14 +5,15 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-from scrapy.item import Item, Field
+import scrapy
 
 
-class MeiziItem(Item):
+class DbmeiziItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    imgsrc = Field()
-    title = Field()
-    topic_link = Field()
-    star_count = Field()
-    update_time = Field()
+    imgsrc = scrapy.Field()
+    title = scrapy.Field()
+    topic_link = scrapy.Field()
+    star_count = scrapy.Field()
+    update_time = scrapy.Field()
+    pass
