@@ -11,6 +11,7 @@ $app = new \Slim\Slim();
 $db = new DbConnect();
 $conn = $db->connect();
 
+// get
 $app->get('/girls', function () use ($app, $conn) {
     $page = $app->request->get('p');
     if ($page == '' || !is_numeric($page)) {
@@ -19,6 +20,7 @@ $app->get('/girls', function () use ($app, $conn) {
     var_dump($name);
 });
 
+// put
 $app->get('/girls/:girlid', function ($girlid) use ($app, $conn) {
 	if ($girlid == '' || !is_numeric($girlid)) {
     	$response["code"] = 0;
@@ -26,8 +28,8 @@ $app->get('/girls/:girlid', function ($girlid) use ($app, $conn) {
      	exit(json_encode($response));
 	}
 
-	// let the girl's startcount + 1
-	$result = $conn->query("UPDATE dbmeizi set startcount = startcount + 1 WHERE id = {$girlid}");
+	// let the girl's star_count + 1
+	$result = $conn->query("UPDATE meizi set star_count = star_count + 1 WHERE id = {$girlid}");
 
 	if ($result) {
     	// success
