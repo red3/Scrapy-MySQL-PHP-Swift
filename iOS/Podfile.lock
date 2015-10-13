@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (2.0.0)
+  - Kingfisher (1.5.0)
+  - Koloda (1.1.2):
+    - pop (~> 1.0)
+  - pop (1.0.7)
+
+DEPENDENCIES:
+  - Alamofire (~> 2.0)
+  - Kingfisher (~> 1.5)
+  - Koloda
+
+SPEC CHECKSUMS:
+  Alamofire: 2f13548b29d25a58ecd91c9225fb51493e2b782b
+  Kingfisher: cbb280faba0e9ae0a73d2c51072f7dd94ccfe640
+  Koloda: 19b54bfb56c3b9e4e946c750b1c3bc771298d7ca
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+
+COCOAPODS: 0.38.2
